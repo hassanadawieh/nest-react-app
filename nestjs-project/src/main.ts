@@ -7,7 +7,7 @@ async function bootstrap() {
 
   // Enable CORS with specific settings
   app.enableCors({
-    origin: 'http://localhost:3000', // Allow requests from this frontend origin
+    origin: `${process.env.REACT_APP_API_URL}`, // Allow requests from this frontend origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // HTTP methods to allow
     credentials: true, // Allow credentials like cookies, authorization headers, etc.
   });
